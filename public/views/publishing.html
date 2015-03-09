@@ -1,0 +1,83 @@
+<h3>Publishing data id:{{currentPublishing.id}}</h3>
+
+<h3 class="loading"
+    ng-if="publishingService.isLoading">
+
+  <img src="images/loading.gif">
+  LOADING .....
+</h3>
+
+<div ng-if="!publishingService.isLoading"
+     class="content-wrapper">
+
+  <div class="col-sm-12">
+    <button type="button" class="btn btn-primary" ng-click="onBackClick()">Back</button>
+  </div>
+
+  <div class="left-content">
+
+    <form class="form-horizontal">
+
+      <legend>Details</legend>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">STATUS</label>
+        <div class="col-sm-6">
+          <span class="form-text">{{currentPublishing.status}}</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">SCHEDULED</label>
+        <div class="col-sm-6">
+          <span ng-if="currentPublishing.scheduled"
+                class="form-text">{{moment(currentPublishing.scheduled).format('YYYY-MM-DD h:mm a')}}</span>
+        </div>
+      </div>
+
+      <legend>Content</legend>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">POSTTYPE</label>
+        <div class="col-sm-8">
+          <input type="text"
+                 class="form-control"
+                 ng-model="currentPublishing.content.postType"
+                 placeholder="Enter postType">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">NETWORK</label>
+        <div class="col-sm-8">
+          <input type="text"
+                 class="form-control"
+                 ng-model="currentPublishing.content.network"
+                 placeholder="Enter network">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2">MESSAGE</label>
+        <div class="col-sm-8">
+          <input type="text"
+                 class="form-control"
+                 ng-model="currentPublishing.content.message"
+                 placeholder="Enter message">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="right-content">
+
+    <legend>Media</legend>
+    <img src="{{currentPublishing.content.media.url}}">
+    <span>{{currentPublishing.content.media.fileName}}</span>
+  </div>
+
+  <div class="col-sm-12">
+    <button type="button" class="btn btn-primary" ng-click="onSaveClick()">Save</button>
+    <button type="button" class="btn btn-danger" ng-click="onDeleteClick()">Delete</button>
+  </div>
+</div>

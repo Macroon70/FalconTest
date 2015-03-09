@@ -1,0 +1,33 @@
+<h3 class="loading"
+    ng-if="chartService.isLoading">
+
+  <img src="images/loading.gif">
+  LOADING .....
+</h3>
+
+<div ng-if="!chartService.isLoading">
+
+  <h3 class="chart-title">Post impressions</h3>
+  <div d3-chart
+       chart-data="chartService.chartData"
+       namespace="post_impressions"
+       class="chart"></div>
+
+  <h3 ngclass="chart-title">Post impressions Organic</h3>
+  <div d3-chart
+       chart-data="chartService.chartData"
+       namespace="post_impressions_organic"
+       class="chart"></div>
+
+  <h3 class="chart-title">Post impressions Paid</h3>
+  <div d3-chart
+       chart-data="chartService.chartData"
+       namespace="post_impressions_paid"
+       class="chart"></div>
+
+  <h3 class="chart-title">Post impressions Viral</h3>
+  <div d3-chart
+       chart-data="chartService.chartData"
+       namespace="post_impressions_viral"
+       class="chart"></div>
+</div>

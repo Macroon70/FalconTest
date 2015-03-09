@@ -1,0 +1,40 @@
+{
+  "name": "FalconSocialTest",
+  "version": "1.0.0",
+  "description": "Test application for FalconSocial",
+  "keywords": [
+    "Node.js",
+    "application",
+    "websocket",
+    "angular"
+  ],
+  "author": "Peter Molnar <peter7012@icloud.com>",
+  "homepage": "http://localhost:3000",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Macroon70/FalconTest"
+  },
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.4.0"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "follow-redirects": "0.0.3",
+    "socket.io": "^1.3.5",
+    "body-parser": "^1.12.0",
+    "underscore": "^1.8.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.2",
+    "angular-resource": "^1.3.14",
+    "angular-route": "^1.3.14",
+    "socket.io-client": "^1.3.5",
+    "minify": "^1.4.8",
+    "angular": "^1.3.14",
+    "d3-tip": "^0.6.2",
+    "moment": "^2.9.0"
+  },
+  "private": true,
+  "main": "app.js"
+}

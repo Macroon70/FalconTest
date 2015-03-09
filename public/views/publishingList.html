@@ -1,0 +1,37 @@
+<h3>Publishing list</h3>
+
+<h3 class="loading"
+    ng-if="publishingService.isLoading">
+
+  <img src="images/loading.gif">
+  LOADING .....
+</h3>
+
+<div ng-if="!publishingService.isLoading"
+     class="content-wrapper publishing-list">
+
+  <button type="button"
+          class="btn btn-primary"
+          ng-click="onNewClick()">New</button>
+
+  <table class="table table-striped table-hover">
+
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Message</th>
+        <th>Network</th>
+        <th>PostType</th>
+      </tr>
+    </thead>
+
+    <tbody ng-repeat="publish in publishingService.publishingData">
+      <tr ng-click="onPublishClick(publish.id)">
+        <td>{{publish.id}}</td>
+        <td>{{publish.content.message}}</td>
+        <td>{{publish.content.network}}</td>
+        <td>{{publish.content.postType}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

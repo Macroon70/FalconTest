@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="testApp">
+    <head>
+        <title>Test App</title>
+        <base href="/">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="app.min.css" rel="stylesheet">
+        <script src="build.js"></script>
+    </head>
+    <body>
+        <header>
+            <div role="navigation" class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a data-toggle="tab" href="api/publishing""><i class="fa fa-flag"></i> Publishing</a></li>
+                            <li><a data-toggle="tab" href="api/chart">Chart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div ng-view></div>
+    </body>
+</html>

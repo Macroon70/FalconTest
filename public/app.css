@@ -1,0 +1,98 @@
+body {
+  font-size: 1em;
+  background-color: #ececec;
+}
+body header li:hover {
+  background-color: #acacac;
+}
+body header li:hover a {
+  color: white !important;
+}
+body header li a {
+  font-size: 1.2em;
+}
+body table {
+  font-size: 1.2em;
+}
+body table th {
+  text-transform: uppercase;
+}
+body table td {
+  cursor: pointer;
+}
+body .btn {
+  width: 100px;
+}
+body .btn.btn-danger {
+  float: right;
+}
+body .content-wrapper {
+  margin: 30px;
+}
+body .content-wrapper.publishing-list .btn {
+  margin-bottom: 20px;
+}
+body .content-wrapper .left-content,
+body .content-wrapper .right-content {
+  position: relative;
+  float: left;
+  width: 50%;
+  font-size: 1.2em;
+  margin: 50px 0;
+}
+body .content-wrapper .right-content {
+  padding-left: 40px;
+}
+body .content-wrapper .right-content img {
+  width: 100%;
+}
+body .content-wrapper .right-content span {
+  margin-top: 15px;
+  display: block;
+  text-align: right;
+}
+body .content-wrapper .form-text {
+  display: block;
+  margin-top: 10px;
+  line-height: 1em;
+}
+body h3 {
+  text-align: center;
+}
+body h3.loading img {
+  display: inline-block;
+  vertical-align: -8px;
+}
+body .chart-title {
+  padding-top: 30px;
+}
+body .chart-title:not(:first-child) {
+  border-top: 1px solid #acacac;
+}
+body .d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+body .d3-tip span {
+  line-height: 1.5em;
+}
+body .d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+body .d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
